@@ -25,7 +25,7 @@ underneath it, and lead the people who ship it.
 spanning EHS, supply chain, procurement, and finance, replacing scattered reporting across the business.
 
 **Micro Market Model** — A Python linear-programming engine that pinpoints competitive opportunities across
-micro markets. Won the company's Transformation Bonus Award.
+micro markets. Won the company's Transformation Award.
 
 **Gensuite refresh, Phase 1 and 2** — Led an end-to-end refresh of the enterprise EHS application, shipping
 80+ feature enhancements that reshaped how every global site captures safety data.
@@ -33,14 +33,15 @@ micro markets. Won the company's Transformation Bonus Award.
 **Enterprise agent layer** — NLQ and summarization agents with an MCP architecture and deterministic
 algorithms, keeping answers reproducible and auditable while controlling model cost.
 
-**Resin &amp; Wood Market Weather Brief** — A static decision-support app tracking public operating signals for
-chemicals, resins, engineered wood, and construction demand. EPA, Census, and BLS data turned into
-state-level action scores, an operating-model ontology, and scenario simulation. Built with Astro.
+**[Resin &amp; Wood Market Weather Brief](https://resin-wood-market-weather-brief.vercel.app/)** — A live
+decision-support app tracking public operating signals for chemicals, resins, engineered wood, and
+construction demand. EPA, Census, and BLS data turned into scored, tiered state-level actions, an
+operating-model ontology, and scenario simulation. Built with Astro. **[Open it →](https://resin-wood-market-weather-brief.vercel.app/)**
 
 ## Recognition
 
 - **Leadership Award** — international IT leadership assignment at the Pernis site, Port of Rotterdam
-- **Transformation Bonus Award** — Micro Market Model
+- **Transformation Award** — Micro Market Model
 - **STAR Award** — end-to-end design and implementation of site safety incentive metrics
 
 ## Currently
