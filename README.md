@@ -4,6 +4,10 @@
 
 > I turn plant, safety, and operational data into decisions executives can act on.
 
+*Safety numbers are only as good as the denominator and the citation underneath them.* That question started with
+the hours data behind our own TRIR, moved into the platforms that govern it, and became a research programme on
+whether national injury statistics and AI answers can be trusted.
+
 **[Website](https://priyatham9.github.io/)** · **[Grounded research programme](https://priyatham9.github.io/grounded/)** · [LinkedIn](https://linkedin.com/in/priyatham9) · [priyatham9@gmail.com](mailto:priyatham9@gmail.com)
 
 ---
@@ -43,8 +47,9 @@ A programme on grounded reasoning for safety-critical AI in EHS and process indu
 ## Selected work
 
 - **Enterprise ontology and digital twin.** Leading the migration to Palantir Foundry: one governed model spanning EHS, supply chain, procurement, and finance.
-- **Micro Market Model.** Python linear-programming engine that pinpoints competitive opportunities across micro markets. Transformation Award.
-- **Enterprise agent layer.** NLQ and summarization agents with an MCP architecture and deterministic algorithms, keeping answers reproducible, auditable, and cost-controlled.
+- **[Micro Market Model](https://priyatham9.github.io/work/micro-market-model.html).** Python linear-programming engine that pinpoints competitive opportunities across micro markets. Transformation Award.
+- **[Gensuite refresh, Phase 1 and 2](https://priyatham9.github.io/work/gensuite-refresh.html).** End-to-end refresh of the enterprise EHS application, 80+ feature enhancements.
+- **[Enterprise agent layer](https://priyatham9.github.io/work/agent-layer.html).** NLQ and summarization agents with an MCP architecture and deterministic algorithms, keeping answers reproducible, auditable, and cost-controlled.
 - **[Resin &amp; Wood Market Weather Brief](https://resin-wood-market-weather-brief.vercel.app/).** Live decision-support app turning EPA, Census, and BLS data into scored, state-level actions and scenario simulation.
 
 ## Recognition
