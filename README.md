@@ -15,12 +15,10 @@ whether national injury statistics and AI answers can be trusted.
 ## At a glance
 
 - **Owns the enterprise EHS system end to end.** Sole global administrator of Benchmark ESG (Gensuite) for a global chemicals manufacturer, including OSHA, MSHA, and ACC compliance reporting and government submissions.
-- **Shipped at scale.** Led the Gensuite refresh (Phases 1 and 2): 80+ feature enhancements that reshaped how every global site captures safety data.
+- **Shipped at scale.** Led the Gensuite refresh (Phases 1 and 2): 80+ feature enhancements to how global sites capture safety data.
 - **Recognised for business impact.** Transformation Award for the Micro Market Model, a Python linear-programming engine; plus Leadership and STAR awards.
 - **Found what national injury rates miss.** Analysed 2.8M OSHA filings: 2.07% of filings carry 96.7% of reported hours, and the TRIR correction swings from 1.4x to 249x between years.
 - **Builds in public.** Six open research repositories with 810 tests, and a draft paper with 197 verified references.
-
-*Safety numbers are only as good as the denominator and the citation underneath them.*
 
 ## What I do
 
@@ -49,7 +47,7 @@ A programme on grounded reasoning for safety-critical AI in EHS and process indu
 - **Enterprise ontology and digital twin.** Leading the migration to Palantir Foundry: one governed model spanning EHS, supply chain, procurement, and finance.
 - **[Micro Market Model](https://priyatham9.github.io/work/micro-market-model.html).** Python linear-programming engine that pinpoints competitive opportunities across micro markets. Transformation Award.
 - **[Gensuite refresh, Phase 1 and 2](https://priyatham9.github.io/work/gensuite-refresh.html).** End-to-end refresh of the enterprise EHS application, 80+ feature enhancements.
-- **[Enterprise agent layer](https://priyatham9.github.io/work/agent-layer.html).** NLQ and summarization agents with an MCP architecture and deterministic algorithms, keeping answers reproducible, auditable, and cost-controlled.
+- **[Enterprise agent layer](https://priyatham9.github.io/work/agent-layer.html).** NLQ and summarization agents with an MCP architecture and deterministic algorithms, keeping answers reproducible and auditable.
 - **[Resin &amp; Wood Market Weather Brief](https://resin-wood-market-weather-brief.vercel.app/).** Live decision-support app turning EPA, Census, and BLS data into scored, state-level actions and scenario simulation.
 
 ## Recognition
