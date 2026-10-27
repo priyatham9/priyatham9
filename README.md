@@ -20,7 +20,7 @@ whether national injury statistics and AI answers can be trusted.
 - **Shipped at scale.** Led the Gensuite refresh (Phases 1 and 2): 80+ feature enhancements to how global sites capture safety data.
 - **Recognised for business impact.** Transformation Award for the Micro Market Model, a Python linear-programming engine; plus Leadership and STAR awards.
 - **Found what national injury rates miss.** Analysed 2.8M OSHA filings: 2.07% of filings carry 96.7% of reported hours, and the TRIR correction swings from 1.4x to 249x between years.
-- **Builds in public.** Seven open research repositories with 961 passing tests, and a draft paper whose 197 references are each checked against a primary source.
+- **Builds in public, and checks itself.** 996 test functions across six programme repositories, a draft paper with 197 references, and a [claims registry](https://github.com/priyatham9/grounded/blob/main/claims/claims.json) in which each headline number is tied to a committed source file and a test, checked in CI and weekly.
 
 ## What I do
 
@@ -35,15 +35,21 @@ whether national injury statistics and AI answers can be trusted.
 
 A programme on grounded reasoning for safety-critical AI in EHS and process industries. [Start here →](https://priyatham9.github.io/grounded/start.html)
 
+**Verifiability.** Headline numbers are listed in the [claims registry](https://github.com/priyatham9/grounded/blob/main/claims/claims.json) (22 claims, each with its source file, expected value and verifying test; checker in `claims/check_claims.py`). Metric definitions, with their 29 CFR 1904 sources, are in the [metric dictionary](https://github.com/priyatham9/grounded/blob/main/metrics/DICTIONARY.md), and a test checks that the Python and TypeScript implementations agree.
+
 | Project | What it shows | Code |
 |---|---|---|
-| [OSHA data quality](https://priyatham9.github.io/ehs-osha-analysis/) | 2.8M establishment filings, CY2016-2024. A flagged establishment is flagged again next year 27.2% of the time vs 0.95% for a clean one. | [repo](https://github.com/priyatham9/ehs-osha-analysis) |
-| [AI grounding benchmark](https://priyatham9.github.io/ehs-ai-grounding-eval/) | 68 safety-critical QA items across 8 domains, built around plausible-but-dangerous answers. | [repo](https://github.com/priyatham9/ehs-ai-grounding-eval) |
-| [Human factors ontology](https://priyatham9.github.io/ehs-human-factors-ontology/) | OWL ontology crosswalked to SPAR-H, CREAM, HFACS and HSE PIFs, with traceable rule derivations. | [repo](https://github.com/priyatham9/ehs-human-factors-ontology) |
+| [OSHA data quality](https://priyatham9.github.io/ehs-osha-analysis/) | 2.8M establishment filings, CY2016-2024. A flagged establishment is flagged again next year 27.2% of the time vs 0.95% for a clean one. Also: a [browser filing checker](https://priyatham9.github.io/ehs-osha-analysis/filing_check.html) for one Form 300A (rules in one JSON spec, Python and JavaScript parity test), a rate detectability planner (site-years needed to tell two TRIRs apart, by size band), and a typed ontology client generated from the ontology spec. | [repo](https://github.com/priyatham9/ehs-osha-analysis) |
+| [AI grounding benchmark](https://priyatham9.github.io/ehs-ai-grounding-eval/) | 68 safety-critical QA items across 8 domains, built around plausible-but-dangerous answers. Adds answer-or-abstain scoring (risk-coverage, AURC) for four non-LLM retrievers; no language model has been evaluated. Four regulatory-currency draft items are quarantined, excluded from scoring until verified. | [repo](https://github.com/priyatham9/ehs-ai-grounding-eval) |
+| [Human factors ontology](https://priyatham9.github.io/ehs-human-factors-ontology/) | OWL ontology crosswalked to SPAR-H, CREAM, HFACS and HSE PIFs, with traceable rule derivations. Adds 10 CSB investigations coded to the crosswalk (25 codings, each with a quoted passage) and a rule-based narrative-to-factor suggester scored against them: precision 0.74, recall 0.80, fitted to those same 25 pairs, so optimistic (0.56 recall without rules taken from the quotes). | [repo](https://github.com/priyatham9/ehs-human-factors-ontology) |
 | [SEM for safety risk](https://priyatham9.github.io/ehs-risk-sem/) | Simulation studies on what structural equation models can and cannot recover. | [repo](https://github.com/priyatham9/ehs-risk-sem) |
 | [Safety cost-benefit calculator](https://priyatham9.github.io/ehs-capitals-calculator/) | Human-capital-inclusive ROI with sensitivity and Monte Carlo modes. | [repo](https://github.com/priyatham9/ehs-capitals-calculator) |
 | [OSHA benchmarks](https://priyatham9.github.io/ehs-benchmarks/) | TRIR/DART library and percentile tables for 3,842 NAICS x size peer groups. | [repo](https://github.com/priyatham9/ehs-benchmarks) |
-| [Chemical plant peers](https://priyatham9.github.io/ehs-chemical-peers/) | 10,597 US chemical plants, joining OSHA injury logs with EPA release records. A low injury rate did not predict fewer chemical releases. | [repo](https://github.com/priyatham9/ehs-chemical-peers) |
+| [Chemical plant peers](https://priyatham9.github.io/ehs-chemical-peers/) | 10,597 US chemical plants, joining OSHA injury logs with EPA release records. A low injury rate did not predict fewer chemical releases. A [two-group comparison page](https://priyatham9.github.io/ehs-chemical-peers/compare.html) shows any two groups side by side with exact intervals and an exact test. | [repo](https://github.com/priyatham9/ehs-chemical-peers) |
+
+### Foundry-style builds on public data
+
+[A hub page](https://priyatham9.github.io/foundry-style/) lists the builds that apply Foundry's patterns (ontology, typed client, functions and actions, lineage, data expectations) in plain Python and static HTML, each with its repository files and stated limits. They use public data only, need no Foundry account, and are independent: not made by, affiliated with or endorsed by Palantir.
 
 ## Selected work
 
