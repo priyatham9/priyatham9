@@ -18,7 +18,7 @@ whether national injury statistics and AI answers can be trusted.
 - **Shipped at scale.** Led the Gensuite refresh (Phases 1 and 2): 80+ feature enhancements to how global sites capture safety data.
 - **Recognised for business impact.** Transformation Award for the Micro Market Model, a Python linear-programming engine; plus Leadership and STAR awards.
 - **Found what national injury rates miss.** Analysed 2.8M OSHA filings: 2.07% of filings carry 96.7% of reported hours, and the TRIR correction swings from 1.4x to 249x between years.
-- **Builds in public.** Six open research repositories with 810 tests, and a draft paper with 197 verified references.
+- **Builds in public.** Seven open research repositories with 961 passing tests, and a draft paper whose 197 references are each checked against a primary source.
 
 ## What I do
 
@@ -41,6 +41,7 @@ A programme on grounded reasoning for safety-critical AI in EHS and process indu
 | [SEM for safety risk](https://priyatham9.github.io/ehs-risk-sem/) | Simulation studies on what structural equation models can and cannot recover. | [repo](https://github.com/priyatham9/ehs-risk-sem) |
 | [Safety cost-benefit calculator](https://priyatham9.github.io/ehs-capitals-calculator/) | Human-capital-inclusive ROI with sensitivity and Monte Carlo modes. | [repo](https://github.com/priyatham9/ehs-capitals-calculator) |
 | [OSHA benchmarks](https://priyatham9.github.io/ehs-benchmarks/) | TRIR/DART library and percentile tables for 3,842 NAICS x size peer groups. | [repo](https://github.com/priyatham9/ehs-benchmarks) |
+| [Chemical plant peers](https://priyatham9.github.io/ehs-chemical-peers/) | 10,597 US chemical plants, joining OSHA injury logs with EPA release records. A low injury rate did not predict fewer chemical releases. | [repo](https://github.com/priyatham9/ehs-chemical-peers) |
 
 ## Selected work
 
