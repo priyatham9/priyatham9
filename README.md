@@ -10,6 +10,8 @@ whether national injury statistics and AI answers can be trusted.
 
 **[Website](https://priyatham9.github.io/)** · **[Grounded research programme](https://priyatham9.github.io/grounded/)** · [LinkedIn](https://linkedin.com/in/priyatham9) · [priyatham9@gmail.com](mailto:priyatham9@gmail.com)
 
+> **Featured: [EHS Insight Hub](https://priyatham9.github.io/work/insight-hub.html)**, a Palantir Foundry widget over an ontology of 12 EHS object types (cases, events, concerns, insights), with every KPI and status rule in one logic module. In review.
+
 ---
 
 ## At a glance
@@ -44,6 +46,7 @@ A programme on grounded reasoning for safety-critical AI in EHS and process indu
 
 ## Selected work
 
+- **[EHS Insight Hub](https://priyatham9.github.io/work/insight-hub.html)** (in review). Palantir Foundry widget: 12 linked ontology object types, KPI and status logic in one module, and a Gensuite-style view. Verified on a branch over 190 cases, 1,221 events, 11,546 concerns and 82 insights.
 - **Enterprise ontology and digital twin.** Leading the migration to Palantir Foundry: one governed model spanning EHS, supply chain, procurement, and finance.
 - **[Micro Market Model](https://priyatham9.github.io/work/micro-market-model.html).** Python linear-programming engine that pinpoints competitive opportunities across micro markets. Transformation Award.
 - **[Gensuite refresh, Phase 1 and 2](https://priyatham9.github.io/work/gensuite-refresh.html).** End-to-end refresh of the enterprise EHS application, 80+ feature enhancements.
