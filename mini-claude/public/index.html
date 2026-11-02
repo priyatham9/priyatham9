@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Family Helper</title>
+<style>
+:root{--bg:#faf7f2;--card:#fff;--ink:#222;--muted:#666;--accent:#c4622d;--me:#fdeee4}
+@media (prefers-color-scheme:dark){:root{--bg:#1c1b19;--card:#2a2926;--ink:#eee;--muted:#aaa;--me:#3d2c22}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:20px/1.5 system-ui,sans-serif}
+main{max-width:720px;margin:auto;padding:16px;min-height:100vh;display:flex;flex-direction:column}
+h1{font-size:28px;margin:8px 0 4px}p.sub{color:var(--muted);margin:0 0 16px}
+#log{flex:1;display:flex;flex-direction:column;gap:12px;padding-bottom:16px}
+.msg{padding:14px 16px;border-radius:16px;background:var(--card);white-space:pre-wrap;box-shadow:0 1px 3px #0002}
+.me{background:var(--me);align-self:flex-end;max-width:85%}
+form{display:flex;gap:8px;position:sticky;bottom:0;background:var(--bg);padding:12px 0}
+textarea,input{flex:1;font:inherit;padding:14px;border-radius:12px;border:2px solid #ccc;background:var(--card);color:var(--ink)}
+button{font:inherit;font-weight:600;padding:14px 22px;border:0;border-radius:12px;background:var(--accent);color:#fff}
+button:disabled{opacity:.5}.hidden{display:none}#new{background:none;color:var(--accent);padding:4px 0}
+</style></head><body><main>
+<h1>Family Helper</h1><p class="sub">Ask anything — recipes, phone help, letters, health questions.</p>
+<form id="login"><input id="pw" type="password" placeholder="Enter password" autocomplete="current-password"><button>Go</button></form>
+<section id="app" class="hidden" style="display:contents">
+<div id="log"></div>
+<form id="ask"><textarea id="q" rows="2" placeholder="Type your question here…"></textarea><button id="send">Ask</button></form>
+<button id="new" type="button">Start a new conversation</button>
+</section>
+</main><script>
+let pw = ""; try { pw = localStorage.getItem("pw") || ""; } catch {}
+let msgs = [];
+const $ = id => document.getElementById(id);
+function show(){ $("login").classList.add("hidden"); $("app").classList.remove("hidden"); $("q").focus(); }
+function add(text, me){ const d=document.createElement("div"); d.className="msg"+(me?" me":""); d.textContent=text; $("log").append(d); d.scrollIntoView({behavior:"smooth"}); return d; }
+if (pw) show(); else $("app").style.display="none";
+$("login").onsubmit = e => { e.preventDefault(); pw=$("pw").value; try{localStorage.setItem("pw",pw)}catch{}; $("app").style.display="contents"; show(); };
+$("new").onclick = () => { msgs=[]; $("log").innerHTML=""; };
+$("q").onkeydown = e => { if (e.key==="Enter" && !e.shiftKey){ e.preventDefault(); $("ask").requestSubmit(); } };
+$("ask").onsubmit = async e => {
+  e.preventDefault(); const q=$("q").value.trim(); if(!q) return;
+  $("q").value=""; add(q,true); msgs.push({role:"user",content:q});
+  const w=add("Thinking…"); $("send").disabled=true;
+  try {
+    const r = await fetch("/api/chat",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({password:pw,messages:msgs.slice(-20)})});
+    const d = await r.json();
+    if (r.status===401){ try{localStorage.removeItem("pw")}catch{}; w.textContent="Wrong password. Reload the page and try again."; msgs.pop(); }
+    else if (!r.ok) { w.textContent="Sorry, something went wrong. Please try again."; msgs.pop(); }
+    else { w.textContent=d.reply; msgs.push({role:"assistant",content:d.reply}); }
+  } catch { w.textContent="No internet connection? Please try again."; msgs.pop(); }
+  $("send").disabled=false;
+};
+</script></body></html>
